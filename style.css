@@ -1,0 +1,11 @@
+h1 {
+    color:blue;
+}
+
+li#first {
+    color:rgb(160, 148, 95)
+}
+
+.hobby {
+    background-color: darkgreen;
+}
