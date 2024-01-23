@@ -63,7 +63,7 @@ mask.addEventListener('click', () => {
 });
 
 function omikuji2(){
-    const list = ["大吉!!!","中吉!!","中吉!!","中吉!!","小吉!","小吉!","小吉!","小吉!","凶","凶","・・・大凶"];
+    const list = ["大吉!!!","中吉!!","中吉!!","中吉!!","小吉!","小吉!","小吉!","小吉!","凶","凶","大凶"];
     let random = Math.floor(Math.random() * list.length);
     document.getElementById("result2").textContent = list[random];
 }
