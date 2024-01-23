@@ -1,71 +1,157 @@
-'use strict'
-// 1行目に記載している 'use strict' は削除しないでください
+<!DOCTYPE html>
+<html lang="ja">
 
-// function test(actual, expected) {
-//     if (JSON.stringify(actual) === JSON.stringify(expected)) {
-//       console.log("OK! Test PASSED.");
-//     } else {
-//       console.error("Test FAILED. Try again!");
-//       console.log("    actual: ", actual);
-//       console.log("  expected: ", expected);
-//       console.trace();
-//     }
-//   }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!-- <script type="text/javascript" src="modules/lodash.min.js"></script>
+  <script type="text/javascript" src="modules/test-boilerplate.js"></script> -->
+  <script type="text/javascript" src="script.js" async></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
 
-// test()
+<!-- <script>
+  window.onload = function () {
+    // おみくじ
+    // この順番が良い順番らしい（吉と中吉が逆になることも）
+    const list = ["大吉","吉","中吉","小吉","末吉","凶","大凶"];
 
-console.log("test")
+    document.getElementById("button3").onclick = function () {
+      var random = Math.floor(Math.random() * list.length);
+      document.getElementById("result").textContent = list[random];
+    }
+  }
+</script> -->
 
-// function alertHello() {
-//     window.alert("Hello");
-// }
+<body>
+  <h1 align="center">増田　誠</h1>
+  <h2 align="center">プロフィール</h2>
+  
+  <table width="75%" align="center">
+    <tr>
+      <th width="50%"></th>
+      <th width="10%"></th>
+      <th width="40%"></th>
+    <tr height="">
+      <td rowspan="5">
+        <figure class="pic1">
+          <img  src="甘いコーヒー2.jpg" width = "600px">
+        </figure></td>
+      <td align="center">出身<br>および<br>生活拠点:
+      </td>
+      <td>
+        <ul>
+          <li>青森生まれ、大阪育ち。</li>
+          <li>緊急事態宣言と同時に上京後、東京で1年半過ごしたのち、転勤。現在名古屋3年目。</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">所属・業務</td>
+      <td>
+        <ul>
+          <li>お客様関連部　お客様体験改⾰室<br>
+        オーナーズマニュアルＧ</li>
+        <li>車両OM、ナビOMの現地翻訳サポート（DITA編集）</li>
+        <li>出向元（～'25年1月満了予定）：<br>セザックス株式会社（印刷、マニュアル製作）</li>
+        </ul>
+       </td>
+    </tr>
+    <tr>
+      <td align="center">趣味:</td>
+      <td>
+        （消費時間の長い順）
+        <ol>
+          <li>Youtube（ゲーム実況、Apple製品・ガジェット紹介系）or 録画したラヴィットの視聴</li>
+          <li>サウナ（週1では行きたい）</li>
+          <li>パチスロ北斗の拳（月1-2回？）</li>
+          <li>一人卓球（マシン相手）（月1）</li>
+          <li>ゴルフの打ちっぱなし（さぼり中）</li>
+          
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">好きな<br>アーティスト</td>
+      <td><ul>
+        <li>ASKA</li>
+        <li>福山雅治</li>
+        <li>斉藤和義</li>
+        <li>BONJOVI</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">ひとこと:</td>
+      <td>トップバッターがんばります！</td>
+    </tr>
 
-// console.log(document.getElementById("button1"))
-// const button1 = document.getElementById("button1");
-// button1.addEventListener("click", alertHello)
+  </table>
 
-function omikuji0(){
-    const list = ["0","1","2"];
-    let random = Math.floor(Math.random() * 3);
-    //random関数を利用して3までのランダムの数を作成
-　　//floor関数で小数を切り捨てて整数にする
-    document.getElementById("result0").innerText = list[random];
-}
+  <h2 align="center">発表内容</h2>
+  
+  <h3 align="center">おみくじ ver.0</h3>
+  <div align="center">
+    <buttton align="center" class="btn" id ="button0">test(button0)</button>
+  </div>
+  <div>
+    <p id="result0" align="center">ここに結果(result0)</p>
+  </div>
+  <!-- <div>説明</div> -->
+  <div class="ac-box">
+    <input id="ac-1" name="accordion-1" type="checkbox" />
+    <label for="ac-1"> 説明 </label>
+    <div class="ac-small">
+    <p>
+      function omikuji0(){<br>
+        const list = ["0","1","2"];<br>
+        let random = Math.floor(Math.random() * 3);<br>
+        //random関数を利用して3までのランダムの数を作成<br>
+        //floor関数で小数を切り捨てて整数にする<br>
+        document.getElementById("result0").innerText = list[random];<br>
+      }<br>
+    <br>
+    const button0 = document.getElementById("button0");<br>
+    button0.addEventListener("click", omikuji0)<br>
+    </p>
 
-const button0 = document.getElementById("button0");
-button0.addEventListener("click", omikuji0)
+    <p>
+      ↓以下を見直し<br>
+      おみくじの結果の見直し<br>
+      "大吉!!!","中吉!!","中吉!!","中吉!!","小吉!","小吉!","小吉!","小吉!","凶","凶","大凶"<br>
+      list.lengthを使う（結果の数に左右されないよう）<br>
+      ボタンに動きをつける（ネットからコピー）<br>
+    </p>
+    </div>
+    </div>
+
+
+  
+  <h3 align="center">おみくじ ver.1.0</h3>
+
+  <div class="button001">
+    <a id="button1" href="#"><span>今日の運勢</span></a>
+  </div>
+  <div>
+    <p id="result" align="center" class = "result"></p>
+  </div>
+
+  <h3 align="center">おみくじ ver.1.1</h3>
+
+  <div class="btn-container">
+    <button id="btn3">今日の運勢</button>
+  </div>
+  <div id="mask" class="hidden"></div>
+  <section id="modal" class="hidden">
+    <p id="result2" class = "result"></p>
+  </section>
+
+  <h3></h3>
 
 
 
-function omikuji(){
-    const list = ["大吉","中吉","中吉","中吉","小吉","小吉","小吉","小吉","凶","凶","大凶"];
-    let random = Math.floor(Math.random() * list.length);
-    //random関数を利用して0～リストの数までのランダムの数を作成
-　　//floor関数で小数を切り捨てて整数にする
-    document.getElementById("result").textContent = list[random];
-}
+</body>
 
-const button1 = document.getElementById("button1");
-button1.addEventListener("click", omikuji)
-
-const btn3 = document.getElementById('btn3');
-const mask = document.getElementById('mask');
-const modal = document.getElementById('modal');
-
-btn3.addEventListener('click', () => {
-  mask.classList.remove('hidden');
-  modal.classList.remove('hidden');
-});
-
-mask.addEventListener('click', () => {
-  mask.classList.add('hidden');
-  modal.classList.add('hidden');
-});
-
-function omikuji2(){
-    const list = ["大吉!!!","中吉!!","中吉!!","中吉!!","小吉!","小吉!","小吉!","小吉!","凶","凶","大凶"];
-    let random = Math.floor(Math.random() * list.length);
-    document.getElementById("result2").textContent = list[random];
-}
-const button3 = document.getElementById("btn3");
-button3.addEventListener("click", omikuji2)
+</html>
